@@ -41,10 +41,6 @@ class _Day19State extends State<Day19> {
                         left: 10,
                           top: 15,
                           child: Icon(Icons.arrow_back,size: 40,color: Colors.white,)),
-                      Positioned(
-                          right: 10,
-                          top: 15,
-                          child: Icon(Icons.heart_broken,size: 40,color: Colors.white,))
                     ],
                   ),
                 ),

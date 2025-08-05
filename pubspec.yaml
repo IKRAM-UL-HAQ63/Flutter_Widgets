@@ -37,6 +37,10 @@ dependencies:
   geolocator:
   cached_network_image:
   fluttertoast:
+  font_awesome_flutter:
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
 
 
   # The following adds the Cupertino Icons font to your application.

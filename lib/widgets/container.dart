@@ -9,7 +9,7 @@ class Profile_card extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Container",
-          style: TextStyle(color: Colors.white, fontSize: 30),
+          style: TextStyle(color: Colors.white, fontSize: 90,fontFamily: "FontMain"),
         ),
       ),
       body: Column(

@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
 
-
 class Stack_Positioned extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Stack & Positioned"),
-      backgroundColor: Colors.blue,
-      centerTitle: true,),
+      appBar: AppBar(
+        title: Text(
+          "Stack & Positioned",
+          style: TextStyle(color: Colors.white, fontSize: 25),
+        ),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+      ),
       body: Center(
         child: Stack(
           children: [
-            Container(
-              width: 300,
-              height: 300,
-              color: Colors.red,
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.orange,
-            ),
+            Container(width: 300, height: 300, color: Colors.red),
+            Container(width: 200, height: 200, color: Colors.orange),
             Positioned(
               top: 20,
               right: 20,

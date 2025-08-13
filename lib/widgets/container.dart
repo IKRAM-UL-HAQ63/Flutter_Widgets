@@ -9,7 +9,11 @@ class Profile_card extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Container",
-          style: TextStyle(color: Colors.white, fontSize: 90,fontFamily: "FontMain"),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 90,
+            fontFamily: "FontMain",
+          ),
         ),
       ),
       body: Column(
@@ -19,7 +23,7 @@ class Profile_card extends StatelessWidget {
             width: 300,
             height: 150,
             alignment: Alignment.center,
-            margin: EdgeInsets.only(left: 20, top: 20),
+            margin: EdgeInsets.only(left: 20),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Colors.red, Colors.lime, Colors.deepPurple],
@@ -51,7 +55,7 @@ class Profile_card extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.only(left: 5),
               child: Text(
-                "Name: IKRAM-RABIA",
+                "Name: IKRAM-UL-HAQ",
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.black,

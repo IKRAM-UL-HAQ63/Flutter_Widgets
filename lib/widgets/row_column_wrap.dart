@@ -28,8 +28,7 @@ class Row_Column_Wrap extends StatelessWidget {
                       width: 70,
                       height: 70,
                       decoration: BoxDecoration(
-                        color:
-                            Colors.primaries[index % Colors.primaries.length],
+                        color: Colors.primaries[index %  Colors.primaries.length],
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(width: 3, color: Colors.black),
                       ),
@@ -46,8 +45,7 @@ class Row_Column_Wrap extends StatelessWidget {
                     height: 100,
                     margin: EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                      color: Colors
-                          .primaries[(index + 3) % Colors.primaries.length],
+                      color: Colors.primaries[(index + 3) % Colors.primaries.length],
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(width: 3, color: Colors.black),
                     ),
@@ -60,21 +58,24 @@ class Row_Column_Wrap extends StatelessWidget {
                 }),
               ),
               SizedBox(height: 20),
-              Wrap(
-                spacing: 15,
-                runSpacing: 15,
-                children: List.generate(12, (index) {
-                  return Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.primaries[index % Colors.primaries.length],
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(width: 3, color: Colors.black),
-                    ),
-                    child: Icon(Icons.star, color: Colors.white, size: 30),
-                  );
-                }),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Wrap(
+                  spacing: 15,
+                  runSpacing: 5,
+                  children: List.generate(12, (index) {
+                    return Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.primaries[index % Colors.primaries.length],
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(width: 3, color: Colors.black),
+                      ),
+                      child: Icon(Icons.star, color: Colors.white, size: 30),
+                    );
+                  }),
+                ),
               ),
             ],
           ),

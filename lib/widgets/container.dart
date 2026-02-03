@@ -26,7 +26,7 @@ class Profile_card extends StatelessWidget {
             margin: EdgeInsets.only(left: 20),
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.red, Colors.lime, Colors.deepPurple],
+                colors: [Colors.red, Colors.lime, Colors.deepPurple,Colors.black],
               ),
               border: Border.all(color: Colors.black, width: 3),
               borderRadius: BorderRadius.circular(15),
@@ -86,7 +86,7 @@ class Profile_card extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.only(left: 5),
               child: Text(
-                "Email: ikrab@email.com",
+                "Email: ikrab@gmail.com",
                 style: TextStyle(
                   fontSize: 15,
                   color: Colors.black,

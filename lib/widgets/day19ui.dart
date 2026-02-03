@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 class Day19 extends StatefulWidget {
   const Day19({Key? key}) : super(key: key);
 
@@ -15,36 +16,49 @@ class _Day19State extends State<Day19> {
         child: SafeArea(
           child: Column(
             children: [
-              Stack(children: [
-                Container(
-                  height: 390,
-                  // color: Colors.yellow,
-                  child: Stack(
-                    children: [
-                      Container(
-                        height: 340,
-                        decoration: BoxDecoration(
-                          // color: Colors.red,
+              Stack(
+                children: [
+                  Container(
+                    height: 390,
+                    // color: Colors.yellow,
+                    child: Stack(
+                      children: [
+                        Container(
+                          height: 340,
+                          decoration: BoxDecoration(
+                            // color: Colors.red,
                             image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage("https://www.bing.com/th/id/OIP.fhDQvhgSgQTvdpvN_RU7BwHaHa?w=127&h=150&c=6&o=7&dpr=1.5&pid=1.7&rm=3"))),
-                      ),
-                      Positioned(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                "https://www.bing.com/th/id/OIP.fhDQvhgSgQTvdpvN_RU7BwHaHa?w=127&h=150&c=6&o=7&dpr=1.5&pid=1.7&rm=3",
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
                           bottom: 0,
                           right: 24,
                           child: CircleAvatar(
                             backgroundImage: NetworkImage(
-                                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'),
+                              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                            ),
                             radius: 50,
-                          )),
-                      Positioned(
-                        left: 10,
+                          ),
+                        ),
+                        Positioned(
+                          left: 10,
                           top: 15,
-                          child: Icon(Icons.arrow_back,size: 40,color: Colors.white,)),
-                    ],
+                          child: Icon(
+                            Icons.arrow_back,
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ]),
+                ],
+              ),
               Container(
                 padding: EdgeInsets.all(10),
                 // color: Colors.blue,
@@ -53,14 +67,19 @@ class _Day19State extends State<Day19> {
                   children: [
                     Text(
                       'Madrid City Tour for Designers',
-                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    SizedBox(
-                      height: 10,
+                    SizedBox(height: 10),
+                    Text(
+                      'This is a random description of the topic',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey.shade800,
+                      ),
                     ),
-                    Text('This is a random description of the topic',
-                        style:
-                        TextStyle(fontSize: 18, color: Colors.grey.shade800)),
                   ],
                 ),
               ),
@@ -72,7 +91,7 @@ class _Day19State extends State<Day19> {
                     rowIconText('20', Icons.favorite_rounded),
                     rowIconText('34', Icons.upload),
                     rowIconText('82', Icons.message),
-                    rowIconText('295', Icons.face)
+                    rowIconText('295', Icons.face),
                   ],
                 ),
               ),
@@ -80,8 +99,9 @@ class _Day19State extends State<Day19> {
               Container(
                 padding: EdgeInsets.all(10),
                 child: Text(
-                    "What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?"),
-              )
+                  "What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?",
+                ),
+              ),
             ],
           ),
         ),
@@ -92,17 +112,9 @@ class _Day19State extends State<Day19> {
   Widget rowIconText(String text, IconData icon) {
     return Row(
       children: [
-        Text(
-          text,
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(
-          width: 5,
-        ),
-        Icon(icon)
+        Text(text, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        SizedBox(width: 5),
+        Icon(icon),
       ],
     );
   }

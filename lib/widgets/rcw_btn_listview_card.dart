@@ -31,10 +31,11 @@ class RCW_btn_ListView_Card extends StatelessWidget {
         ),
         backgroundColor: Colors.indigo,
         centerTitle: true,
+        elevation: 6,
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

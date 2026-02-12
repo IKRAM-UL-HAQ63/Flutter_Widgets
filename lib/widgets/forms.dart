@@ -87,18 +87,24 @@ class _Forms_widget extends State<Forms_widget> {
               SizedBox(height: 20),
 
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.pinkAccent,
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
 
                     showDialog(
                       context: context,
-                      builder: (_) => AlertDialog(
-                        title: Text("Form Submitted"),
-                        content: Text(
-                          "Name: $name\nEmail: $email\nPassword: $password",
-                        ),
-                      ),
+                      builder: (context){
+                        return AlertDialog(
+                          title: Text("Form Submitted"),
+                          content: Text(
+                            "Name: $name\nEmail: $email\nPassword: $password",
+                          ),
+                        );
+                      }
                     );
                   }
                 },

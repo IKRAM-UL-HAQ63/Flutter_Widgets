@@ -1,56 +1,62 @@
 import 'package:flutter/material.dart';
-class BottomNavigBar extends StatefulWidget{
-  _BotmNavBar createState()=>_BotmNavBar();
+
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({Key? key}) : super(key: key);
+
+  @override
+  State<BottomNavBar> createState() => _SimpleBottomNavState();
 }
-class _BotmNavBar extends State<BottomNavigBar>{
-  int currentIndex=0;
-  Widget? child;
-  List<String> dummyNotes = [];
+
+class _SimpleBottomNavState extends State<BottomNavBar> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    if (currentIndex == 0) {
-      child = Text("--🏠Home-- You are Welcome", style: TextStyle(fontSize: 24));
-    } else if (currentIndex == 1) {
-      child = ElevatedButton(
-        onPressed: () {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Simple Bottom Nav',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+      ),
+
+      // Body changes based on selectedIndex
+      body: Center(
+        child: Text(_getPageName(), style: const TextStyle(fontSize: 30)),
+      ),
+
+      // BottomNavigationBar
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex, // Which item is currently selected
+
+        onTap: (index) {
+          // When user taps an item
           setState(() {
-            dummyNotes.add("Note #${dummyNotes.length + 1}");
+            selectedIndex = index; // Update the selected index
           });
         },
-        child: Text("Add Note"),
-      );
-    } else {
-      child = ListView.builder(
-        itemCount: dummyNotes.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              title: Text(dummyNotes[index]),
-              trailing: Icon(Icons.arrow_forward_ios),
-              leading: Icon(Icons.star),
-            ),
-          );
-        },
-      );
-    }
-    return Scaffold(
-    body: Center(child: child),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        backgroundColor: Colors.lightGreen,
-        onTap: (index){
-          setState((){
-            currentIndex=index;
-    });
-    },
-          items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.red,), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.note_add,color:Colors.red,), label: "Add Note"),
-        BottomNavigationBarItem(icon: Icon(Icons.view_agenda,color:Colors.red,), label: "View Notes")
-      ]),
+        backgroundColor: Colors.black12,
+        elevation: 10,
 
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home,), label: 'Home',),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+      ),
     );
+  }
 
+  // Helper method to get page name
+  String _getPageName() {
+    if (selectedIndex == 0) {
+      return '🏠 Home Page';
+    } else if (selectedIndex == 1) {
+      return '🔍 Search Page';
+    } else {
+      return '👤 Profile Page';
+    }
   }
 }

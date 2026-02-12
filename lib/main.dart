@@ -18,6 +18,13 @@ import 'package:new_project/widgets/richtext.dart';
 import 'package:new_project/widgets/tabbar.dart';
 import 'package:new_project/widgets/dismissible_snackbar.dart';
 import 'package:new_project/Review/review1.dart';
+import 'package:new_project/widgets/img.dart';
+import 'package:new_project/widgets/alertdialog_btn_drawer_snackbar.dart';
+import 'package:new_project/widgets/modelbottomsheet.dart';
+import 'package:new_project/widgets/bottomnavigationbar.dart';
+import 'package:new_project/widgets/dropdownbuton.dart';
+import 'package:new_project/UI Clone/Dribbble Design/ui_clone.dart';
+import 'package:new_project/UI Clone/TikTok UI/tiktok_ui.dart';
 
 import 'Review/review2.dart';
 void main() async {
@@ -33,12 +40,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.deepPurple
+        brightness: Brightness.dark,
       ),
       debugShowCheckedModeBanner: false,
       title: 'Dropdown Example',
-      home: Drawer_CircleAvator(),
+      home: TikTok_UI(),
     );
   }
 }

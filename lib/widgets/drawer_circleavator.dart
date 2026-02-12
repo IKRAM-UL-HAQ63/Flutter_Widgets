@@ -68,7 +68,7 @@ class Drawer_CircleAvator extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.green,
                 borderRadius: BorderRadius.circular(30),
-                border: Border.all(width: 2,color: Colors.black54)
+                border: Border.all(width: 2, color: Colors.black54),
               ),
             ),
             Divider(thickness: 2),
@@ -116,7 +116,7 @@ class Drawer_CircleAvator extends StatelessWidget {
                 );
               },
             ),
-            Divider(height: 5, thickness: 5,color: Colors.red,),
+            Divider(height: 5, thickness: 5, color: Colors.red),
           ],
         ),
       ),
@@ -131,17 +131,21 @@ class Drawer_CircleAvator extends StatelessWidget {
                 child: Row(
                   children: List.generate(6, (index) {
                     return InkWell(
-                      onTap:(){
-
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text("Clicked on Row Widget item ${index+1}"),
-                          backgroundColor: Colors.black87,
-                          behavior: SnackBarBehavior.floating,
-                          duration: Duration(seconds: 3),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              "Clicked on Row Widget item ${index + 1}",
+                            ),
+                            backgroundColor: Colors.black87,
+                            behavior: SnackBarBehavior.floating,
+                            duration: Duration(seconds: 3),
                             shape: RoundedRectangleBorder(
                               side: BorderSide(width: 3, color: Colors.black),
                               borderRadius: BorderRadius.circular(15),
-                        )));
+                            ),
+                          ),
+                        );
                       },
                       child: Container(
                         margin: EdgeInsets.only(right: 10),

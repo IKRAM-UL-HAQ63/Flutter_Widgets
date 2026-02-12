@@ -10,7 +10,17 @@ class _DropDownButton extends State<DropDownExample>{
   Widget build(BuildContext context) {
    return Scaffold(
      appBar: AppBar(
-       title: Center(child: Text("DropDown")),
+       backgroundColor: Colors.indigoAccent,
+       title: Text(
+         "DropDown Button",
+         style: TextStyle(
+           color: Colors.black,
+           fontWeight: FontWeight.bold,
+           fontSize: 30,
+         ),
+       ),
+       //backgroundColor: Colors.indigo,
+       centerTitle: true,
      ),
      body: Center(
        child: Column(
